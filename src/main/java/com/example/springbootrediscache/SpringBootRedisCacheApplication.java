@@ -13,7 +13,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 public class SpringBootRedisCacheApplication {
 	@Bean
 	JedisConnectionFactory jedisConnectionFactory() {
-		RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration("localhost", 6379);
+		// RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration("localhost", 6379);
+		RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration("104.198.224.0", 6379);
 		return new JedisConnectionFactory(redisStandaloneConfiguration);
 	}
 	@Bean
